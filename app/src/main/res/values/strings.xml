@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SmartPunch</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="title_activity_choose_label">activity_choose_label</string>
+    <string name="title_activity_choose_annotation_type">ChooseAnnotationTypeActivity</string>
+    <string name="title_activity_annotation_session">AnnotationSession</string>
+    <string name="title_activity_choose_annotator_name">ChooseAnnotatorNameActivity</string>
+    <string name="title_activity_annotation_main">annotation_main</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+</resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:layout_gravity="center"
+    android:background="@color/dark_grey"
+    android:padding="@dimen/box_inset_layout_padding"
+    android:textAlignment="center"
+    tools:context=".ChooseAnnotationTypeActivity"
+    tools:deviceIds="wear">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:textAlignment="center">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/blue">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginTop="@dimen/screen_percentage_05"
+                android:text="Choose label type:"
+                android:textAlignment="center" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txv_choosen_hand_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="waiting..."
+            android:textAlignment="center" />
+
+        <ListView
+            android:id="@+id/listview_label_types"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="20dp"
+            android:foregroundGravity="center"
+            android:textAlignment="center">
+
+        </ListView>
+
+    </LinearLayout>
+
+</android.support.wear.widget.BoxInsetLayout>

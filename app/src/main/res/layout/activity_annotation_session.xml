@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".AnnotationSession"
+    tools:deviceIds="wear">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@color/blue">
+
+                <TextView
+                    android:id="@+id/annosess_hand_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginTop="-7dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="hand"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/annosess_labeltype_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="TextView"
+                    android:textAlignment="center" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ProgressBar
+                        android:id="@+id/progress_waiting_anim"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="180dp"
+                        android:layout_height="129dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="19dp"
+                        android:animationResolution="50"
+                        android:indeterminate="true"
+                        android:indeterminateDuration="50"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/btn_start_stop_anno"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/button_states"
+                        android:onClick="btn_toggleAnnotation"
+                        android:text="START"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_back"
+                    style="@android:style/Widget.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/blue"
+                    android:onClick="onBackPressed"
+                    android:paddingEnd="5dp"
+                    android:text="Back"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_save_anno_session"
+                    style="@android:style/Widget.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/blue"
+                    android:onClick="onSavePressed"
+                    android:paddingStart="5dp"
+                    android:text="Save"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</android.support.wear.widget.BoxInsetLayout>
